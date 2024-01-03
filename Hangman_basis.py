@@ -109,8 +109,9 @@ while True:
     print("".join(display))  # wyświetlanie obecnego stanu słowa
 
     if guess not in chosen_word:
-        lives -= 1  # zmniejszanie ilości zyć, jeśli odgadnięta litera nie istnieje w danym słowie
         draw_hangman(10 - lives)  # rysowanie własciwego FRAME wisielca na podstawie liczby straconych żyć
+        lives -= 1  # zmniejszanie ilości zyć, jeśli odgadnięta litera nie istnieje w danym słowie
+
         if lives == 0:
             print("You loose! The correct word was:", "".join(chosen_word))
             break
